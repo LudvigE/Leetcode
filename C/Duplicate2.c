@@ -22,6 +22,9 @@ bool containsNearbyDuplicate(int* nums, int numsSize, int k) {
                 //printf("\n");
                 return true;
             }
+            else{
+                list[x] = i; //Kan komma igen duplicate senare som är närmare
+            }
         } 
         //printf("%d", x );
         //printf("\n");
@@ -35,7 +38,7 @@ bool containsNearbyDuplicate(int* nums, int numsSize, int k) {
 } 
 
 int main () { 
-    int nums[] = {1,2,3,1};
+    int nums[] = {1,0,1,1};
     int numsSize = sizeof(nums) / sizeof(nums[0]);
     int k = 3;
     printf("Result: %d", containsNearbyDuplicate(nums, numsSize, k));
