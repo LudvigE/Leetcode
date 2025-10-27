@@ -2,11 +2,11 @@
 #include <stdbool.h>
 bool containsDuplicate(int* nums, const int numsSize) {
     
-    int list[numsSize]; 
+    int list[numsSize+1]; 
 
     int i; 
     int x; 
-    for(int i = 0; i < numsSize; ++i){
+    for(int i = 0; i < numsSize+1; ++i){
         x = nums[i]; 
         if(1 != list[x]){
             list[x] = 1;
